@@ -33,11 +33,11 @@ Table of contents
     Ans: 514579
 
 4. Run the program
-    cd AoC_2020_Day_1_1
+    cd AoC_2020_Day_1
     make run
 
 5. Run the tests
-    cd AoC_2020_Day_1_1
+    cd AoC_2020_Day_1
     make test
 
 6. Future improvements
