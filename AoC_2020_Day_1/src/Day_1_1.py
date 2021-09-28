@@ -28,5 +28,5 @@ class Day_1_1:
             for idx in range(tracer, len(numbers)):
                 nbr_2 = numbers[idx]
                 if nbr_1 + nbr_2 == total:
-                    return nbr_1 * nbr_2 # 18578
+                    return nbr_1 * nbr_2
         print("List does not contain two entries where sum is: %s" % (total))
