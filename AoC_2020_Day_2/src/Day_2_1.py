@@ -8,6 +8,7 @@ class Day_2_1:
     def get_nbr_of_valid_password_old(lines):
         """
         Returns the number of valid password based on password policy
+        See README 2.1 Day 2-1
 
         Parameters
         ----------
