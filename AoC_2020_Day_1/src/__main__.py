@@ -6,7 +6,7 @@ https://adventofcode.com/2020/day/1
 
 print("Starting advent of code 2020 day 1")
 
-FILE = 'data/aoc_2020_day_1_1_data_large.txt'
+FILE = 'data/aoc_2020_day_1_1_data_task.txt'
 TOTAL = 2020
 
 with open(FILE) as f:
