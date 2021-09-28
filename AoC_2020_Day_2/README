@@ -1,0 +1,28 @@
+Table of contents
+
+1. Task Description
+2. Summary
+3. Example
+4. Future improvements:
+
+1. Task Description
+    https://adventofcode.com/2020/day/2
+
+2. Summary:
+    Given a list of lines containing password policy and password:
+        determine the number of valid passwords.
+
+    Input line format:
+        n1-n2 c: PASS
+        where
+            n1:   the lowest number of time c must appear for valid password
+            n2:   the highest number of time c must appear for valid password
+            c:    a valid character in the password PASS
+            PASS: the valid/invalid PASSWORD
+
+3. Example:
+    1-3 a: abcde        Valid.   'a' appears one time
+    1-3 b: cdefg        Invalid. 'b' does is not in password
+    2-9 c: ccccccccc    Valid.   'c' appears nine times
+
+4. Future improvements:
