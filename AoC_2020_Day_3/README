@@ -3,7 +3,9 @@ Table of contents
     1. Task Description
     2. Summary
     3. Example
-    4. Future improvements:
+    4. Run the program
+    5. Run the tests
+    6. Future improvements
 
 1. Task Description
     https://adventofcode.com/2020/day/3
@@ -63,4 +65,12 @@ Table of contents
 
     Answer: 7 trees encountered.
 
-4. Future improvements:
+4. Run the program
+    cd AoC_2020_Day_3
+    make run
+
+5. Run the tests
+    cd AoC_2020_Day_3
+    make test
+
+6. Future improvements
