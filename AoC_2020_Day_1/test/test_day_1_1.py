@@ -1,11 +1,11 @@
 from src.Day_1_1 import Day_1_1 as D11
 
 def test_small_input():
-    file = 'data/aoc_2020_day_1_1_data_small.txt'
+    file = 'data/aoc_2020_day_1_1_data_example.txt'
     assert get_product(file) == 514579
 
 def test_large_input():
-    file = 'data/aoc_2020_day_1_1_data_large.txt'
+    file = 'data/aoc_2020_day_1_1_data_task.txt'
     assert get_product(file) == 485739
 
 def get_product(file):
