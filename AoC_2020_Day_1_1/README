@@ -1,0 +1,51 @@
+Table of contents
+
+    1. Task Description
+    2. Summary
+    3. Example
+    4. Run the program
+    5. Run the tests
+    6. Future improvements:
+
+1. Task Description
+    https://adventofcode.com/2020/day/1
+
+2. Summary
+    Given a list of integers:
+        Return the product of two list entries that sum up to 2020.
+
+        A + B = 2020
+        A x B = ???
+
+        Ans: ???
+
+3. Example
+    1721
+    979
+    366
+    299
+    675
+    1456
+
+    1721 + 299 = 2020
+    1721 x 299 = 514579
+
+    Ans: 514579
+
+4. Run the program
+    cd AoC_2020_Day_1_1
+    make run
+
+5. Run the tests
+    cd AoC_2020_Day_1_1
+    make test
+
+6. Future improvements
+
+    An improvement could be:
+        first sort the list entries from lowest to highest
+        find a pivot element
+        from the pivot element
+            compare the list entries A and B:
+                A: lowest to pivot element
+                B: pivot element to highest
