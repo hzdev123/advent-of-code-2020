@@ -60,3 +60,10 @@ Table of contents
     make test
 
 6. Future improvements
+    Remove duplicated code by combining src/Day_2_1.py and src/Day_2_2.py into src/Day_2.py
+
+    Advantages:
+        removal of duplicated code
+
+    Disadvantages:
+        more complex class and function
