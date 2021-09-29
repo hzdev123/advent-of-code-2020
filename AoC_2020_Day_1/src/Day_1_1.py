@@ -21,11 +21,11 @@ class Day_1_1:
             The product of the two list entries whose sum is total
 
         """
-        tracer = 0      # tracer: tracks where in list we are.
-                        #         Avoid starting over and doing duplicated addition
+        tracker = 0     # tracker: tracks where in list we are.
+                        #          Avoid starting over and doing duplicated addition
         for nbr_1 in numbers:
-            tracer = tracer + 1
-            for idx in range(tracer, len(numbers)):
+            tracker = tracker + 1
+            for idx in range(tracker, len(numbers)):
                 nbr_2 = numbers[idx]
                 if nbr_1 + nbr_2 == total:
                     return nbr_1 * nbr_2
