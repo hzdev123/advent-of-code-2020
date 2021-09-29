@@ -9,7 +9,11 @@ Table of contents
         3.2 Day-1-2
     4. Run the program
     5. Run the tests
-    6. Future improvements:
+    6. Discussion
+        6.1 Day 1-1 - 2D
+        6.2 Day 1-2 - 3D
+    7. Future improvements:
+
 
 1. Task Description
     https://adventofcode.com/2020/day/1
@@ -66,7 +70,144 @@ Table of contents
     cd AoC_2020_Day_1
     make test
 
-6. Future improvements
+6. Discussion
+    cd AoC_2020_Day_1
+    make compare
+        to see a graph which compares the brute force approach with position tracking approach.
+
+    The trivial solution is to compare every list entry with eachother to find the sum.
+
+    The solution used is an improvement where we keep track of already visited list entries so that we avoid duplicated additions.
+
+    The Position Tracking solution is as following.
+
+        6.1 Day 1-1 - 2D
+            1
+            x
+            ---             0                       n=1
+            x
+
+            12
+            x2
+            ---             1 + 0                   n=2
+            12
+
+            123
+            x23
+            ---             2 + 1 + 0               n=3
+            12 13
+            23
+
+            1234
+            x234
+            -----           3 + 2 + 1 + 0           n=4
+            12 13 14
+            23 24
+            34
+
+            12345
+            x2345
+            -----           4 + 3 + 2 + 1 + 0       n=5
+            12 13 14 15
+            23 24 25
+            34 35
+            45
+
+            123456
+            x23456
+            ------          5 + 4 + 3 + 2 + 1 + 0   n=6
+            12 13 14 15 16
+            23 24 25 26
+            34 35 36
+            45 46
+            56
+
+            etc
+
+            based on the above examples the below conclusions are drawn:
+
+                Number of operations for worst case scenario:
+                    Compare every list element with eachother:
+                        f(n) = n^2
+
+                    Use Position Tracking to avoid duplicated operations:
+                        f(n) = sum(range(1, n))
+
+                        1 is used in range instead of 0 because 0 does not add anything.
+
+        6.1 Day 1-2 - 3D
+            1
+            x
+            y
+            ---             0                       n=1
+            x
+
+            12
+            x2
+            yy
+            ---             0 + 0                   n=2
+            x
+
+
+            123
+            x23
+            yy3
+            ---             1 + 0 + 0               n=3
+            123
+
+            1234
+            x234
+            yy34
+            -----
+            123 124         3 + 1 + 0 + 0           n=4
+            134
+
+            234
+
+            12345
+            x2345
+            yy345
+            -----           6 + 3 + 1 + 0 + 0       n=5
+            123 124 125
+            134 135
+            145
+
+            234 235
+            245
+
+            345
+
+
+            123456
+            x23456
+            yy3456
+            ------          10 + 6 + 3 + 1 + 0 + 0  n=6
+            123 124 125 126
+            134 135 136
+            145 146
+            156
+
+            234 235 236
+            245 246
+            256
+
+            345 346
+            356
+
+            456
+
+            based on the above examples the below conclusions are drawn:
+
+                Number of operations for worst case scenario:
+
+                    Compare every list element with eachother:
+                        f(n) = n^3
+                    USe Position Tracking to avoid duplicated operations:
+                        f(n) = sum(range(1, n - 1)) + previous sums
+
+                    1 is used in range instead of 0 because 0 does not add anything.
+
+7. Future improvements
 
     An improvement could be:
         first sort the list entries from lowest to highest
@@ -75,6 +216,3 @@ Table of contents
             compare the list entries A and B:
                 A: lowest to pivot element
                 B: pivot element to highest
-
-    For day-1-2:
-        keep track of iterated list entries and do not revisit them.             
