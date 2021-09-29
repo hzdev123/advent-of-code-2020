@@ -5,7 +5,7 @@ https://adventofcode.com/2020/day/3
 '''
 print("Starting advent of code 2020 day 3")
 
-FILE = 'data/aoc_2020_day_3_1_data_task.txt'
+FILE = 'data/aoc_2020_day_3_data_task.txt'
 with open(FILE) as f:
     lines = [line.strip() for line in f]
 
