@@ -5,7 +5,7 @@ class Graph:
     Class for drawing graphs
     """
 
-	def compare(x, y1, y2, title):
+	def draw(x, y1, y2, title):
 		"""
 		Draws a graph where two curves are compared
 

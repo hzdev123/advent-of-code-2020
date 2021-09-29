@@ -17,5 +17,5 @@ y_d12_brute = DG.get_Brute_Data(n, 3)
 y_d11_ok = DG.get_Day_1_1_Tracked_Data(n)
 y_d12_ok = DG.get_Day_1_2_Tracked_Data(n)
 
-Graph.compare(x, y_d11_brute, y_d11_ok, title_d11)
-Graph.compare(x, y_d12_brute, y_d12_ok, title_d12)
+Graph.draw(x, y_d11_brute, y_d11_ok, title_d11)
+Graph.draw(x, y_d12_brute, y_d12_ok, title_d12)
