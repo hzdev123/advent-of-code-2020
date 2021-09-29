@@ -6,7 +6,6 @@ Class used for comparing performance between brute force
 and position tracking solution.
 """
 
-
 n = 500
 
 title_d11 = "2D Brute Force vs Position Tracking"

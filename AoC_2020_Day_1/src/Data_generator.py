@@ -46,7 +46,7 @@ class Data_generator:
         """
         data = []
         for i in range(1, n + 1):
-            data.append(sum(range(0, i)))
+            data.append(sum(range(1, i)))
         return data
 
 
