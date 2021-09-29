@@ -1,5 +1,5 @@
 
-class Day_3_1:
+class Day_3:
     """
     Helper class for solving advent of code 2020 day 3 part 1
     """
