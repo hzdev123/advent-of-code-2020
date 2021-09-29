@@ -32,7 +32,8 @@ class Day_2_2:
             tok = re.sub(token_regex, r"\1", line)
             pw = line.split(":")[1].strip()
 
-            if (pw[p_one] == tok and pw[p_two] != tok) or (pw[p_one] != tok and pw[p_two] == tok):
+            if (pw[p_one] == tok and pw[p_two] != tok) or \
+                (pw[p_one] != tok and pw[p_two] == tok):
                 nbr_of_valid_pass = nbr_of_valid_pass + 1
 
         return nbr_of_valid_pass
