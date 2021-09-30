@@ -27,11 +27,11 @@ class Day_3:
 
         """
         current_pos = 0
-        area_lenght = len(lines[0])
+        area_length = len(lines[0])
         nbr_of_trees = 0
         for idx in range(vertical, len(lines), vertical):
             current_pos = current_pos + horizontal
-            current_char = lines[idx][current_pos % area_lenght]
+            current_char = lines[idx][current_pos % area_length]
 
             if current_char == '#':
                 nbr_of_trees = nbr_of_trees + 1
