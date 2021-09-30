@@ -22,17 +22,14 @@ class Day_1_2:
             The product of the three list entries whose sum is total
 
         """
-        tracker_0 = 0   # tracker: tracks where in list we are.
-                        #         Avoid starting over and doing duplicated addition
+        complememts = {}
+        for nbr in numbers:
+            complement = total - nbr
+            complememts[complement] = ""
 
         for nbr_1 in numbers:
-            tracker_0 = tracker_0 + 1
-            tracker_1 = tracker_0
-            for idx_2 in range(tracker_0, len(numbers) - 1):
-                nbr_2 = numbers[idx_2]
-                tracker_1 = tracker_1 + 1
-                for idx_3 in range(tracker_1, len(numbers)):
-                    nbr_3 = numbers[idx_3]
-                    if nbr_1 + nbr_2 + nbr_3 == total:
-                        return nbr_1 * nbr_2 * nbr_3
+            for nbr_2 in numbers:
+                if nbr_1 + nbr_2 in complememts:
+                    return nbr_1 * nbr_2 * (total - nbr_1 - nbr_2)
+
         print("List does not contain three entries where sum is: %s" % (total))
