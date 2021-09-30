@@ -1,0 +1,72 @@
+Table of contents
+
+    1. Task Description
+    2. Summary
+        2.1 Day 4-1
+        2.2 Day 4-2
+    3. Example
+        3.1 Day 4-1
+        3.2 Day 4-2
+    4. Run the program
+    5. Run the tests
+    6. Future improvements
+
+1. Task Description
+    https://adventofcode.com/2020/day/4
+
+2. Summary:
+    2.1 Day 4-1
+        Passport fields:
+            byr (Birth Year)
+            iyr (Issue Year)
+            eyr (Expiration Year)
+            hgt (Height)
+            hcl (Hair Color)
+            ecl (Eye Color)
+            pid (Passport ID)
+            cid (Country ID)
+
+        Valid passport criteria:
+            all field beside cid must be present.
+            The presence of cid is optional.
+
+        Given a batch file where each passport are seperated by a blank line:
+            return the number of valid passports.
+
+    2.2 Day 4-2
+
+3. Example:
+    3.1 Day 4-1
+        Example batch file:
+            ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
+            byr:1937 iyr:2017 cid:147 hgt:183cm
+
+            iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884
+            hcl:#cfa07d byr:1929
+
+            hcl:#ae17e1 iyr:2013
+            eyr:2024
+            ecl:brn pid:760753108 byr:1931
+            hgt:179cm
+
+            hcl:#cfa07d eyr:2025 pid:166559648
+            iyr:2011 ecl:brn hgt:59in
+
+            Passport 1: valid. All 8 field is present.
+            Passport 2: invalid. Missing hgt field.
+            Passport 3: valid. Only missing cid.
+            Passport 4: invalid. Missing cid and byr.
+
+            Answer: 2 valid passports
+
+    3.2 Day 4-2
+
+4. Run the program
+    cd AoC_2020_Day_4
+    make run
+
+5. Run the tests
+    cd AoC_2020_Day_4
+    make test
+
+6. Future improvements
