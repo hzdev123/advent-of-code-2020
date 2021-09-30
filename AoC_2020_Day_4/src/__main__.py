@@ -10,3 +10,4 @@ with open(FILE) as f:
     lines = [line.strip() for line in f]
 
 print("Advent of code 2020 day 4-1 solved: %s" % D41.get_nbr_of_valid_passports(lines))
+print("Advent of code 2020 day 4-2 solved: %s" % D42.get_nbr_of_valid_passports(lines))
