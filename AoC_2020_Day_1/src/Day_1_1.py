@@ -22,12 +22,15 @@ class Day_1_1:
             The product of the two list entries whose sum is total
 
         """
-        tracker = 0     # tracker: tracks where in list we are.
-                        #          Avoid starting over and doing duplicated addition
-        for nbr_1 in numbers:
-            tracker = tracker + 1
-            for idx in range(tracker, len(numbers)):
-                nbr_2 = numbers[idx]
-                if nbr_1 + nbr_2 == total:
-                    return nbr_1 * nbr_2
+        complememts = {}
+        for nbr in numbers:
+            complement = total - nbr
+            complememts[complement] = ""
+
+        for nbr in numbers:
+            complement = total - nbr
+
+            if complement in complememts:
+                print("return %s %s" % (nbr, complement) )
+                return complement * nbr
         print("List does not contain two entries where sum is: %s" % (total))

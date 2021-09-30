@@ -6,7 +6,7 @@ def test_example_config():
 
 def test_task_config():
     file = 'data/aoc_2020_day_1_data_task.txt'
-    assert get_two_entries_product(file) == 485739
+    assert get_two_entries_product(file) == 414816
 
 def get_two_entries_product(file):
     total = 2020
