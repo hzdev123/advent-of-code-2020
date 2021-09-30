@@ -108,77 +108,40 @@ Table of contents
         The trivial solution of comparing all list entries with eachother is:
             O(n^2)
 
-        6.2 Day 1-2 - 3D
-            1
-            x
-            y
-            ---             0                       n=1
-            x
+    6.2 Day 1-2 - 3D
+        Given the example list:
+            [1721 979 366 299 675 1456]
 
-            12
-            x2
-            yy
-            ---             0 + 0                   n=2
-            x
+        To find three integers whose sum is 2020 we do the below.
 
+             2020    2020    2020    2020    2020    2020     <--- sum
+            -1721   - 979   - 366   - 299   - 675   -1456     <--- list entries
+            -----   -----   -----   -----   -----   -----
+              299    1041    1654    1721    1345     564     <--- complement
 
-            123
-            x23
-            yy3
-            ---             1 + 0 + 0               n=3
-            123
+        And store the complement as the map's key.
 
-            1234
-            x234
-            yy34
-            -----
-            123 124         3 + 1 + 0 + 0           n=4
-            134
+        Iterating the list and creating the map takes O(n).
+        Accessing element from the map is O(1).
 
-            234
+        Once we have the map, we compare all list entry with eachother and find the pair whose sum
+        exist in the map.
+        This takes O(n^2)
 
-            12345
-            x2345
-            yy345
-            -----           6 + 3 + 1 + 0 + 0       n=5
-            123 124 125
-            134 135
-            145
+        In our example:
+            The map has the 1041 entry.
 
-            234 235
-            245
+            Comparing all list entries with eachother we get:
+                366 + 675 = 1041
 
-            345
+            So the answer is:
+                366 + 675 + 1041 = 2020
 
+        So total time complexity is: O(n) + O(n^2) =
+            O(n^2)
 
-            123456
-            x23456
-            yy3456
-            ------          10 + 6 + 3 + 1 + 0 + 0  n=6
-            123 124 125 126
-            134 135 136
-            145 146
-            156
-
-            234 235 236
-            245 246
-            256
-
-            345 346
-            356
-
-            456
-
-            based on the above examples the below conclusions are drawn:
-
-                Number of operations for worst case scenario:
-
-                    Compare every list element with eachother:
-                        f(n) = n^3
-                    USe Position Tracking to avoid duplicated operations:
-                        f(n) = sum(range(1, n - 1)) + previous sums
-
-                    1 is used in range instead of 0 because 0 does not add anything.
+        The trivial solution of comparing all list entries with eachother is:
+            O(n^3)
 
 7. Future improvements
 
