@@ -5,6 +5,7 @@ class Day_2_2:
     Helper class for solving advent of code 2020 day 2 part 2
     """
 
+    @staticmethod
     def get_nbr_of_valid_password_new(lines):
         """
         Returns the number of valid password based on password policy

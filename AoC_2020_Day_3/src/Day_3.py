@@ -4,6 +4,7 @@ class Day_3:
     Helper class for solving advent of code 2020 day 3 part 1
     """
 
+    @staticmethod
     def get_nbr_trees_encountered(lines, horizontal = 3, vertical = 1):
         """
         Returns the number of trees encountered along the slope

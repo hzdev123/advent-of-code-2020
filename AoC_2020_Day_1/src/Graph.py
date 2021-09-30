@@ -5,6 +5,7 @@ class Graph:
     Class for drawing graphs
     """
 
+	@staticmethod
 	def draw(x, y1, y2, title):
 		"""
 		Draws a graph where two curves are compared

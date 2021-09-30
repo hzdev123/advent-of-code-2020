@@ -3,6 +3,7 @@ class Data_generator:
     Helper class for generating number of iterations given number of list entries in data set
     """
 
+    @staticmethod
     def get_Brute_Data(n, exp):
         """
         Returns a list over the number of iterations from 1 to n + 1
@@ -27,6 +28,7 @@ class Data_generator:
             data.append(i**exp)
         return data
 
+    @staticmethod
     def get_Day_1_1_Tracked_Data(n):
         """
         Returns a list over the number of iterations from 1 to n + 1
@@ -49,7 +51,7 @@ class Data_generator:
             data.append(sum(range(1, i)))
         return data
 
-
+    @staticmethod
     def get_Day_1_2_Tracked_Data(n):
         """
         Returns a list over the number of iterations from 1 to n + 1

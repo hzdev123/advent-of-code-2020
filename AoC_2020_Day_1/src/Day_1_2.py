@@ -4,6 +4,7 @@ class Day_1_2:
     Helper class for solving advent of code 2020 day 1 part 2
     """
 
+    @staticmethod
     def get_three_entries_product(numbers, total):
         """
         Returns the product of three list entries where the sum is total
