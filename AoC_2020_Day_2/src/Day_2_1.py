@@ -22,16 +22,14 @@ class Day_2_1:
             The number of valid passwords
 
         """
-        min_regex = "^(\d+)-\d+ \S: \S+$"
-        max_regex = "^\d+-(\d+) \S: \S+$"
-        token_regex = "^\d+-\d+ (\S): \S+$"
+        all_regex = "^(\d+)-(\d+) (\S): (\S+)$"
 
         nbr_of_valid_pass = 0
         for line in lines:
-            min_limit = int(re.sub(min_regex, r"\1", line))
-            max_limit = int(re.sub(max_regex, r"\1", line))
-            token = re.sub(token_regex, r"\1", line)
-            password = line.split(":")[1].strip()
+            min_limit = int(re.sub(all_regex, r"\1", line))
+            max_limit = int(re.sub(all_regex, r"\2", line))
+            token = re.sub(all_regex, r"\3", line)
+            password = re.sub(all_regex, r"\4", line)
             token_in_pass = password.count(token)
 
             if min_limit <= token_in_pass <= max_limit:
