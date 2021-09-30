@@ -75,67 +75,40 @@ Table of contents
     make compare
         to see a graph which compares the brute force approach with position tracking approach.
 
-    The trivial solution is to compare every list entry with eachother to find the sum.
+    6.1 Day 1-1 - 2D
+        Given the example list:
+            [1721 979 366 299 675 1456]
 
-    The solution used is an improvement where we keep track of already visited list entries so that we avoid duplicated additions.
+        To find two integers whose sum is 2020 we do the below.
 
-    The Position Tracking solution is as following.
+             2020    2020    2020    2020    2020    2020     <--- sum
+            -1721   - 979   - 366   - 299   - 675   -1456     <--- list entries
+            -----   -----   -----   -----   -----   -----
+              299    1041    1654    1721    1345     564     <--- complement
 
-        6.1 Day 1-1 - 2D
-            1
-            x
-            ---             0                       n=1
-            x
+        And store the complement as the map's key.
 
-            12
-            x2
-            ---             1 + 0                   n=2
-            12
+        Iterating the list and creating the map takes O(n).
+        Accessing element from the map is O(1).
 
-            123
-            x23
-            ---             2 + 1 + 0               n=3
-            12 13
-            23
+        For every list entry in the example list, we check if it is in the map.
 
-            1234
-            x234
-            -----           3 + 2 + 1 + 0           n=4
-            12 13 14
-            23 24
-            34
+        If it is, then:
+            (2020 - list entry) + list entry = 2020
 
-            12345
-            x2345
-            -----           4 + 3 + 2 + 1 + 0       n=5
-            12 13 14 15
-            23 24 25
-            34 35
-            45
+        In our example:
+            (2020 - 1721) + 1721 = 299 + 1721 = 2020
+            Both 299 and 1721 is in the example list
 
-            123456
-            x23456
-            ------          5 + 4 + 3 + 2 + 1 + 0   n=6
-            12 13 14 15 16
-            23 24 25 26
-            34 35 36
-            45 46
-            56
+        Iterating the list is O(n).1
 
-            etc
+        So total time complexity is: O(n) + O(1) + O(n) =
+            O(n)
 
-            based on the above examples the below conclusions are drawn:
+        The trivial solution of comparing all list entries with eachother is:
+            O(n^2)
 
-                Number of operations for worst case scenario:
-                    Compare every list element with eachother:
-                        f(n) = n^2
-
-                    Use Position Tracking to avoid duplicated operations:
-                        f(n) = sum(range(1, n))
-
-                        1 is used in range instead of 0 because 0 does not add anything.
-
-        6.1 Day 1-2 - 3D
+        6.2 Day 1-2 - 3D
             1
             x
             y

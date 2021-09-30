@@ -28,9 +28,6 @@ class Day_1_1:
             complememts[complement] = ""
 
         for nbr in numbers:
-            complement = total - nbr
-
-            if complement in complememts:
-                print("return %s %s" % (nbr, complement) )
-                return complement * nbr
+            if nbr in complememts:
+                return nbr * (total - nbr)
         print("List does not contain two entries where sum is: %s" % (total))
