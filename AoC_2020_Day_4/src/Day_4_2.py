@@ -33,21 +33,17 @@ class Day_4_2:
         ]
 
         prev_str = ""
-        processed_lines = []
+        nbr_of_valid_passports = 0
         for line in lines:
             if len(line) == 0:
-                processed_lines.append(" " + prev_str)
+                if func(mandatory_fields, prev_str):
+                    nbr_of_valid_passports = nbr_of_valid_passports + 1
+
                 prev_str = ""
             else:
                 prev_str += " " + line
-        processed_lines.append(" " + prev_str)
 
-        nbr_of_valid_passports = 0
-        for line in processed_lines:
-            for idx, field in enumerate(mandatory_fields):
-                if field not in line:
-                    break
-                if idx == len(mandatory_fields) - 1 and func(mandatory_fields, line):
-                    nbr_of_valid_passports = nbr_of_valid_passports + 1
+        if func(mandatory_fields, prev_str):
+            nbr_of_valid_passports = nbr_of_valid_passports + 1
 
         return nbr_of_valid_passports
