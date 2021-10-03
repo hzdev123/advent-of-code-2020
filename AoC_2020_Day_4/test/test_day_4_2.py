@@ -1,6 +1,5 @@
 import re
-from Day_4_1 import Day_4_1 as D41
-from Day_4_2 import Day_4_2 as D42
+from src.Day_4_2 import Day_4_2 as D42
 
 def is_valid_fields(mandatory_fields, line):
     BYR = ' byr:'
@@ -40,16 +39,16 @@ def is_valid_fields(mandatory_fields, line):
             return False
     return True
 
-'''
-https://adventofcode.com/2020/day/4
-'''
-print("Starting advent of code 2020 day 4")
+def test_example_config():
+    file = 'data/aoc_2020_day_4_data_example.txt'
+    assert get_nbr_of_valid_passports(file) == 2
 
-FILE = 'data/aoc_2020_day_4_data_example.txt'
-with open(FILE) as f:
-    lines = [line.strip() for line in f]
+def test_task_config():
+    file = 'data/aoc_2020_day_4_data_task.txt'
+    assert get_nbr_of_valid_passports(file) == 167
 
-print("Advent of code 2020 day 4-1 solved: %s" % \
-    D41.get_nbr_of_valid_passports(lines))
-print("Advent of code 2020 day 4-2 solved: %s" % \
-    D42.get_nbr_of_valid_passports(is_valid_fields, lines))
+def get_nbr_of_valid_passports(file):
+    with open(file) as f:
+        lines = [line.strip() for line in f]
+
+    return D42.get_nbr_of_valid_passports(is_valid_fields, lines)
