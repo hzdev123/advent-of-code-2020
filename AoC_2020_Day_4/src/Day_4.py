@@ -8,7 +8,7 @@ class Day_4:
     @staticmethod
     def get_nbr_of_valid_passports(func, lines):
         """
-        Returns the number of trees encountered along the slope
+        Returns the number of valid passports
 
         Parameters
         ----------

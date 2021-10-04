@@ -2,13 +2,13 @@ import re
 
 class Passport_check:
     """
-    Helper class for solving advent of code 2020 day 4 part 2
+    Helper class handling passport validity checking
     """
 
     @staticmethod
     def valid(mandatory_fields, line):
         """
-        Returns the number of trees encountered along the slope
+        No field content checking is done. Always returns True
 
         Parameters
         ----------
@@ -20,7 +20,7 @@ class Passport_check:
         Returns
         -------
         bool:
-            Bool representing the validity of the passport
+            Returns True
         """
         for mandatory_field in mandatory_fields:
             if mandatory_field not in line:
@@ -30,7 +30,7 @@ class Passport_check:
     @staticmethod
     def is_valid_fields(mandatory_fields, line):
         """
-        Returns the number of trees encountered along the slope
+        Checks that each passport field conforms to the policy
 
         Parameters
         ----------
