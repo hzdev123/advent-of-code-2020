@@ -1,10 +1,11 @@
 import re
 
-class Day_4_2:
+class Day_4:
     """
     Helper class for solving advent of code 2020 day 4 part 2
     """
 
+    @staticmethod
     def get_nbr_of_valid_passports(func, lines):
         """
         Returns the number of trees encountered along the slope

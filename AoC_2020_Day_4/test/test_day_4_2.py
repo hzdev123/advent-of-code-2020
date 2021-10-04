@@ -1,5 +1,5 @@
 import re
-from src.Day_4_2 import Day_4_2 as D42
+from src.Day_4 import Day_4 as D4
 
 def is_valid_fields(mandatory_fields, line):
     BYR = ' byr:'
@@ -51,4 +51,4 @@ def get_nbr_of_valid_passports(file):
     with open(file) as f:
         lines = [line.strip() for line in f]
 
-    return D42.get_nbr_of_valid_passports(is_valid_fields, lines)
+    return D4.get_nbr_of_valid_passports(is_valid_fields, lines)
