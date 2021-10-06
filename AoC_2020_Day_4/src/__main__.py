@@ -1,6 +1,9 @@
+import sys
+import pathlib
+sys.path.append(str(pathlib.Path().resolve()) + "/common")
 from Day_4 import Day_4 as D4
-from Day_4_1_check import Day_4_1_check as d1
-from Day_4_2_check import Day_4_2_check as d2
+from Day_4_1_check import Day_4_1_check
+from Day_4_2_check import Day_4_2_check
 from Passport_check import Passport_check as PC
 
 '''
