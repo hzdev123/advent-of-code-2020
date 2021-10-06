@@ -2,7 +2,7 @@ import re
 
 class Day_4:
     """
-    Helper class for solving advent of code 2020 day 4 part 2
+    Helper class for solving advent of code 2020 day 4
     """
 
     @staticmethod
