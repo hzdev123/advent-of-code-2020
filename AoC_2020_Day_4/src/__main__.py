@@ -1,5 +1,6 @@
-import re
 from Day_4 import Day_4 as D4
+from Day_4_1_check import Day_4_1_check as d1
+from Day_4_2_check import Day_4_2_check as d2
 from Passport_check import Passport_check as PC
 
 '''
@@ -11,7 +12,9 @@ FILE = 'data/aoc_2020_day_4_data_task.txt'
 with open(FILE) as f:
     lines = [line.strip() for line in f]
 
-print("Advent of code 2020 day 4-1 solved: %s" % \
-    D4.get_nbr_of_valid_passports(PC.valid, lines))
-print("Advent of code 2020 day 4-2 solved: %s" % \
-    D4.get_nbr_of_valid_passports(PC.is_valid_fields, lines))
+for idx, pass_check in enumerate(PC.__subclasses__()):
+    print("Advent of code 2020 day 4-%s solved: %s" % \
+        (idx, \
+        D4.get_nbr_of_valid_passports(pass_check.check_passport, lines)))
+
+print("Advent of code 2020 day 4")
