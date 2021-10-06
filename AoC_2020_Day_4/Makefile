@@ -1,5 +1,8 @@
+#Common files for src/ test/
+COMMON="common"
+
 run:
-	python3 src/__main__.py
+	src/__main__.py $(COMMON)
 .PHONY: run
 
 test:
