@@ -4,8 +4,7 @@ import pathlib
 COMMON = "common"
 if len(sys.argv) > 1:
     COMMON = sys.argv[1]
-sys.path.append(str(pathlib.Path().resolve()) + "/" + COMMON)
-
+sys.path.append("{}/{}".format(str(pathlib.Path().resolve()), COMMON))
 from Day_4 import Day_4 as D4
 from Day_4_1_check import Day_4_1_check
 from Day_4_2_check import Day_4_2_check
